@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { CustomerDTO } from "./customer.dto";
+import { CustomerDTO } from "./DTO/customer.dto";
 
 @Injectable()
 export class CustomerService{
@@ -9,7 +9,7 @@ profileFunc():string{
 }
 
 createCustomer(data:CustomerDTO):CustomerDTO{
-    return {name:data.name, password:data.password, phone:data.phone};
+    return {name:data.name, email:data.email, password:data.password, phone:data.phone , gender:data.gender};
 }
 
 
