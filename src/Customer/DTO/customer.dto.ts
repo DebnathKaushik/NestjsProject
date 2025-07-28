@@ -17,7 +17,7 @@ export class CustomerDTO{
     @IsPassword()    //Custom validator
     password:string;
 
-    @Matches(/^01\d{9}$/,{message: 'phone number is invalid'}) 
+    @Matches(/^01\d{9}$/,{message: 'phone number must have 01 first and 11 digits'}) 
     @IsString()
     phone:string;
 
