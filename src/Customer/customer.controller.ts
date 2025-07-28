@@ -1,6 +1,6 @@
 import {Body,Get,Post,Controller, UsePipes, ValidationPipe,UseInterceptors,UploadedFile} from '@nestjs/common'
 import { CustomerService } from './customer.service';
-import { CustomerDTO } from './customer.dto';
+import { CustomerDTO } from './DTO/customer.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage,MulterError } from 'multer';
 
