@@ -6,12 +6,12 @@ import { diskStorage,MulterError } from 'multer';
 
 @Controller('Customer')
 export class CustomerController{
-constructor (private readonly customer_obj : CustomerService){}
+constructor (private readonly customer_Service_obj : CustomerService){}
 
 // Customer Profile
 @Get('profile')
 ProfileFunc ():string{
-    return this.customer_obj.profileFunc(); 
+    return this.customer_Service_obj.profileFunc(); 
 }
 
 // Customer Create
@@ -19,7 +19,7 @@ ProfileFunc ():string{
 @UsePipes(new ValidationPipe())  // for validation DTO class use this decorator
 CreateCustomer(@Body() data:CustomerDTO):CustomerDTO{
     console.log(data)
-    return this.customer_obj.createCustomer(data);
+    return this.customer_Service_obj.createCustomer(data);
 }
 
 
