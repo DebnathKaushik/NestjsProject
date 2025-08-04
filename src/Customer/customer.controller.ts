@@ -15,7 +15,7 @@ ProfileFunc ():string{
 }
 
 // Customer Create
-@Post('create-customer')
+@Post('Create_Customer')
 @UsePipes(new ValidationPipe())  // for validation DTO class use this decorator
 CreateCustomer(@Body() data:CustomerDTO):CustomerDTO{
     console.log(data)
