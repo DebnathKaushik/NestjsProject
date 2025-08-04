@@ -14,7 +14,7 @@ export class SellerService {
   }
 
   async createSeller(data: SellerDTO): Promise<SellerEntity> {
-    // const seller = this.sellerRepo.create(data);
+    //const seller = this.sellerRepo.create(data);
     return this.sellerRepo.save(data);
   }
 
