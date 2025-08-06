@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { SellerEntity } from './Seller.entity';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([SellerEntity])],
+  imports:[TypeOrmModule.forFeature([SellerEntity],'sellerConnection')],
   controllers: [SellerController],
   providers: [SellerService],
 })

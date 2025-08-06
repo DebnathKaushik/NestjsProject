@@ -6,7 +6,9 @@ import { CustomerModule } from './Customer/customer.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [CustomerModule,SellerModule, TypeOrmModule.forRoot(
-{ type: 'postgres',
+{ 
+  name:'sellerConnection',
+  type: 'postgres',
 host: 'localhost',
 port: 5432,
 username: 'postgres',
